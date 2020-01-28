@@ -1,0 +1,41 @@
+.listTitle, .listItem {
+    display: block;
+}
+
+.newList {
+    padding: 10px 0;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+}
+
+.items, .title, .colorPicker {
+    margin: 5px 0px;
+} 
+
+.addMoreItem:disabled, .submitList:disabled {
+    color: blue;
+    background-color: gray;
+
+}
+
+.colorPicker input {
+    width: 75px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.itemsToContainer {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.listItem {
+    margin-right: 5px;
+}
+
+.addMoreItem, .submitList, .cancelList {
+    border-radius: 5px;
+}

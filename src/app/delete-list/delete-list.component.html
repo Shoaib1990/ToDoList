@@ -1,0 +1,11 @@
+<div class="deleteList">
+  <div class="deleteListBody">
+    Are you sure you want to delete <strong>{{toDoData.title}}</strong>?
+  </div>
+  <div class="deleteListController">
+    <input type="button" value="Yes" [routerLink]="['/home']" (click) = toDoData.deleteToDoList(toDoData.toDoItem_ID)>
+    <input type="button" value="No" [routerLink]="['/home']">
+  </div>
+
+</div>
+

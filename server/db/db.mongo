@@ -1,0 +1,13 @@
+// target database
+use dbToDoList;
+// drop collection if already exists
+db.toDoList.drop();
+// insert new documents into collection
+db.toDoList.insert([
+    {
+        "title": "First List",
+        "color":"#FF5733",
+        "time":"20/12/2019",
+        "toDoItems":["Buy grocery", "Pay utility bills", "Do assignment"]
+    }
+]);

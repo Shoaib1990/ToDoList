@@ -1,0 +1,47 @@
+.createBtn {
+    margin-top: 10px;
+    border-radius: 5px;
+
+}
+
+
+
+.container {
+    margin: 5px;
+    border: solid 3px black;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    position: relative;
+    padding: 5px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.listContainer {
+    flex-wrap: wrap;
+    
+    display: flex;
+}
+
+.container:hover {
+    background-color: hsla(0, 5%, 71%, 0.829);
+    
+}
+
+.toDoItem {
+    font-family: 'calibri', serif;
+    font-weight: lighter;
+    color: rgb(87, 85, 85);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.time {
+    text-align: center;
+    font-size: 10px;
+}

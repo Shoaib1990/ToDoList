@@ -1,0 +1,34 @@
+<div class="newList">
+    <form class="newListFrom">
+        
+        <div class="title">
+            <label for="title">Title:</label>
+            <input type="text" class="listTitle" id="title" maxlength="50" size="20" name="title" [(ngModel)]= "toDoData.title" required>
+        </div>   
+        
+        <div class="colorPicker">
+            <label for="colorPicker">Color: 🖍 </label>
+            <input name="colorPicker" [(colorPicker)]= "toDoData.color" [style.background]="toDoData.color" value={{toDoData.color}}>
+            <span style="font-style: oblique; font-size: smaller;"> Click to choose color</span>
+        </div>
+
+
+        <div class="items">
+            <label for="items">Items to add:</label>
+            <div class="itemsToContainer">
+                <input type="text" class="listItem" id="items" maxlength="100" size="40" name="items" [(ngModel)]="toDoData.item" required>            
+                <input [ngClass]="{addMoreItem:'toDoData.disableItemBtn'}" (click) = "toDoData.addToContainer()" class="addMoreItem" type="button" value="+"/>    
+            </div>            
+        </div>
+
+        <div *ngFor="let i of toDoData.container">
+            <ul>
+                <li>{{i}}</li>
+            </ul>
+        </div>        
+
+        <button [ngClass]="{submitList:true}" class="submitList" type="submit" (click)="toDoData.submitList()" [routerLink]="['/home']">Submit</button>
+        <input class="cancelList" type="submit" [routerLink]="['/home']" value="Cancel">
+    </form>
+</div>
+

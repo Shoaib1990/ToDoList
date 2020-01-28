@@ -1,0 +1,26 @@
+<div class="homeComp">
+
+
+  <!-- <div class="controllers">
+    <button [routerLink]="['/createList']" class="createBtn" type="button">Create 'To Do List'</button>
+    
+  </div> -->
+  <div class="listContainer">
+    <div *ngFor="let item of toDoData.toDoItemArray">
+      <div [style.borderColor]="item.color" class="container">
+        <div class="title">{{item.title}} [<span [routerLink]="['/deleteList']" (click)="toDoData.deleteList(item.title)" [style.color]="'gray'">🗑</span>]</div>
+        <hr>
+        <div class="time">Created on {{item.time}}</div>
+        
+        <div class="toDoItem" *ngFor="let listItems of item.toDoItems">
+          * {{listItems}}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
